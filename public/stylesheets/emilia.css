@@ -1,0 +1,32 @@
+body{
+    background:url('/images/emilia-home.jpg');
+    background-attachment: fixed;
+    background-size:70%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+ul li{
+    list-style-type: none;
+}
+ul a{
+    color:gray;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:12px;
+    font-weight: 500;
+    /*line-height: 34px;*/
+}
+.redes a{
+    background:black;
+    color:white;
+}
+h1{
+    font-family: sans-serif;
+    font-weight: 400;
+    color:rgb(80, 80, 80);
+}
+h2{
+    background-color:rgba(255,255,255,0.2);
+    font-size:60px;
+    font-family: sans-serif;
+}
