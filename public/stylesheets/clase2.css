@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 .rojo{
     width:100px;
     height:100px;
@@ -30,4 +34,30 @@ li{
     width:50px;
     height:50px;
     float:left;
+}
+
+.a{
+    height:40px;
+    background:lightblue;
+}
+.b{
+    height: 200px;
+    background:lightgray;
+    width:30%;
+    _display:inline-block;
+    float:left;
+}
+.c{
+    height: 200px;
+    background:coral;
+    width:70%;
+    _display:inline-block;
+    float:left;
+}
+.cortarFloat{
+    clear:both;
+}
+.d{
+    height: 30px;
+    background:tomato;
 }

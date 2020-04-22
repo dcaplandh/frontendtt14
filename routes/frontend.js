@@ -14,4 +14,7 @@ router.get('/clasevirtual/emilia', function(req, res, next) {
 router.get('/clase2/ejemplo1', function(req, res, next) {
   res.render('frontend/ejemplo2');
 });
+router.get('/clase2/ejemplo2', function(req, res, next) {
+  res.render('frontend/ejemplo3');
+});
 module.exports = router;
