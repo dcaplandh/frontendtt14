@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .padre{
+            background:blue;
+            display:flex;
+            flex-direction:row;
+            justify-content:space-around;
+            align-items: center;
+        }
+        .hijo{
+            background:yellow;
+            border:1px solid black;
+            width:50px;
+            height:50px;
+        }
+        header{
+            display:flex;
+            justify-content: space-between;
+        }
+        .container{
+            width:80%;
+            margin:auto;
+        }
+        section{
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        article.product{
+            width:100px;
+            height:150px;
+            border:1px solid lightgray;
+            border-radius: 5px;
+            box-shadow:0px 0px 2px gray;
+            margin:10px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left:5px;
+        }
+        @media (max-width:700px){
+            article.product{
+                flex-direction: row;
+            }
+        }
+        .img{
+            background:blue;
+            height:80px;
+            width:90px;
+        }
+        h3,h4,h5{
+            margin:0;
+        }
+        .product-data{
+            display:flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="padre">
+        <div class="hijo">1</div>
+        <div class="hijo">2</div>
+        <div class="hijo">3</div>
+    </div>-->
+    <div class="container">
+        <header>
+            <div class="logo">LOGO</div>
+            <div class="search">
+                <input type="text">
+                <button>BUSCAR</button>
+            </div>
+        </header>
+        <main>
+            <section>
+                <article class="product">
+                    <div class="img"></div>
+                    <div class="product-data">
+                        <h4 class="title">Producto</h4>
+                        <h5>Peugeot</h5>
+                    </div>
+                    <h3>$400</h3>
+                </article>
+                <article class="product">2</article>
+                <article class="product">3</article>
+                <article class="product">4</article>
+                <article class="product">5</article>
+                <article class="product">6</article>
+                <article class="product">7</article>
+                <article class="product">8</article>
+            </section>
+        </main>
+        <aside>PUBLICIDAD</aside>
+        <footer>COPYRIGHT</footer>
+    </div>
+</body>
+</html>

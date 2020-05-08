@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de contactos</title>
+</head>
+<body>
+    <h2>Agregá contactos:</h2>
+    <form action="/contacts/add" method="POST">
+        Nombre Completo: 
+        <input type="text" name="full_name">
+        <br>
+        Telefono:
+        <input type="text" name="phone">
+        <br>
+        <button type="submit">AGREGAR</button>
+    </form>
+
+    Conoce más sobre abel pintos:
+    <a href="https://www.youtube.com/watch?v=Yvs5ZJiGQgY">Ver más</a>
+    <br>
+    Conocé más datos sobre gaston:
+    <a href="/contacts/show?nombre=gaston&apellido=estevez">Ver más</a>
+    <br>
+    Conocé más datos sobre mich:
+    <a href="/contacts/show?nombre=michelle&apellido=montero">Ver más</a>
+
+    <%  
+        let amigos = ["Diego","Carlos","Ana","josefina"];
+        for(var i = 0;i < amigos.length;i++){ %>
+            <br>
+            Conocé más datos sobre <%= amigos[i] %>:
+        <a href="/contacts/show?nombre=<%= amigos[i] %>&apellido=Sin_apellido">Ver más</a>
+    <%   } %>
+    
+    <form action="/contacts/search" method="GET">
+        Buscador:
+        <input type="text" name="busqueda"> 
+        <button type="submit">BUSCAR</button>   
+    </form>
+</body>
+</html>
