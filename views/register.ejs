@@ -1,7 +1,70 @@
-<form action="/users/register" method="POST" enctype="multipart/form-data">
-Contraseña <input type="text" name="password">
+<% 
+    function buscarError(name){
+        //console.log("buscarError");
+        if(typeof errors != 'undefined'){
+            let error = errors.filter(function(error){
+                return error.param == name;
+            });
+            //console.log(errors);
+            if(error.length == 0){
+                let error = [{
+                value: '',
+                msg: '',
+                param: '',
+                location: ''
+            }
+            ];
+            //console.log(error);
+            return error;
+            }
+            return error;
+        }else{
+            let error = [{
+                value: '',
+                msg: '',
+                param: '',
+                location: ''
+            }
+            ];
+            //console.log(error);
+            return error;
+        }
+    }
+
+
+    %> 
+
+
+<% if(typeof errors != 'undefined'){ %>
+    <ul style="width:500px;background:pink;border:2px solid #cab343;border-radius:10px;">
+ <%    for(var i = 0; i < errors.length; i++){ %>
+        <li><%= errors[i].msg %></li>
+   <%  } %>
+    </ul>
+<% } %>
+
+
+<form action="/users/register" method="POST">
+Nombre Completo: 
+<input type="text" name="full_name" value="<%= (typeof datos != 'undefined') ? datos.full_name : ''  %>">
+<span style="color:red;font-size:12px;">
+    <%= buscarError('full_name')[0].msg %>
+</span>
 <br>
-<input type="file" name="foto">
+Email:
+<input type="text" name="email" value="<%= (typeof datos != 'undefined') ? datos.email : ''  %>">
+<span style="color:red;font-size:12px;">
+    <%= buscarError('email')[0].msg %>
+</span>
+<br>
+Contraseña: 
+<input type="text" name="password" value="<%= (typeof datos != 'undefined') ? datos.password : ''  %>">
+<span style="color:red;font-size:12px;">
+    <%= buscarError('password')[0].msg %>
+</span>
+<br>
+Confirmar Contraseña: 
+<input type="text" name="confirm_password" value="<%= (typeof datos != 'undefined') ? datos.confirm_password : ''  %>">
 <br>
 <button type="submit">REGISTRO</button>
 </form>
