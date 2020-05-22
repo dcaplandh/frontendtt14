@@ -15,8 +15,30 @@ const controller = {
         }
       },
       showProfile: function(req,res,next){
-        res.send("Estoy en el perfil")
+        //LEER:
+        let usuario = req.session.nombre;
+        let rol = req.cookies.rol;
+        
+        res.send("Estoy en el perfil de "+usuario+ "y soy "+rol);
+      },
+      login: function(req,res,next){
+
+        //PRENDER LA SESION DEL USUARIO
+        //ESCRIBIR:
+        req.session.nombre = "Michelle";
+        req.session.id = 7;
+        req.session.email = "mich@dh.com";
+        //COOKIE
+        let ms = 3600000 * 24 *365 * 10;
+        res.cookie('rol','docente',{maxAge:ms});
+        res.redirect("/users/perfil");
+      },
+      logout: function(req,res,next){
+        //cerrar sesión
+        req.session.destroy();
+        res.redirect("/users/login");
       }
+
 }
 
 module.exports = controller;

@@ -30,6 +30,7 @@ router.post('/register', [
 	check('password').isLength({min:6}).withMessage("La contraseña debe tener al menos 6 caracteres")
 ] , usersController.register);
 
+router.get('/login',usersController.login);
 router.get('/perfil',usersMiddleware.mostrarUsuario,usersController.showProfile);
 
 module.exports = router;
