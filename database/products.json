@@ -1,0 +1,42 @@
+[
+    {
+        "name":"Pava electrica",
+        "price":"2000",
+        "cantidad": 5
+    },
+    {
+        "name":"Pava analogica",
+        "price":"500",
+        "cantidad": 12
+    },
+    {
+        "name":"Cocina BLanca",
+        "price":"45000",
+        "cantidad": 43
+    },
+    {
+        "name":"Cocina Negra",
+        "price":"35000",
+        "cantidad": 14
+    },
+    {
+        "name":"Pava electrica",
+        "price":"2000",
+        "cantidad": 4
+    },
+    {
+        "name":"Pava analogica",
+        "price":"500",
+        "cantidad": 8
+    },
+    {
+        "name":"Cocina BLanca",
+        "price":"45000",
+        "cantidad": 5
+    },
+    {
+        "name":"Cocina Negra",
+        "price":"35000",
+        "cantidad": 122
+    }
+]

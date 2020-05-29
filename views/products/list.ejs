@@ -1,0 +1,28 @@
+<%- include("../header") %>
+<style>
+.product{
+    background:yellow;
+}
+div.products,div.similars{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background:blue;
+}
+div.products{
+    flex-direction: column;
+}
+</style>
+LISTA DE PRODUCTOS
+<div class="products">
+<% for(var i = 0; i < products.length; i++){ %>
+    <%- include("productCard",{product:products[i]}) %>
+<% } %>
+</div>
+<div class="similars">
+    <% for(var i = 0; i < similars.length; i++){ %>
+        <%- include("productCard",{product:similars[i]}) %>
+    <% } %>
+</div>
+<%- include("../footer") %>
