@@ -21,4 +21,5 @@ router.post('/color',function(req,res,next){
   res.cookie('bgColor',color,{maxAge:360000000});
   res.render('verColor',{color});
 });
+
 module.exports = router;

@@ -11,6 +11,7 @@ var usersRouter = require('./routes/users');
 var frontendRouter = require('./routes/frontend');
 var contactsRouter = require('./routes/contacts');
 var productsRouter = require('./routes/products');
+var databaseRouter = require('./routes/database');
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.use('/users', usersRouter);
 app.use('/frontend', frontendRouter);
 app.use('/contacts',contactsRouter);
 app.use('/products',productsRouter);
+app.use('/database',databaseRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

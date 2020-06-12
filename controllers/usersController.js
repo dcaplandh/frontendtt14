@@ -37,6 +37,26 @@ const controller = {
         //cerrar sesión
         req.session.destroy();
         res.redirect("/users/login");
+      },
+      log_in: function(req,res,next){
+        //tomar los datos
+        let userForm = req.body;
+        //buscar al usuario en la base de datos, por email
+        //where:{ email: req.body.email }
+        //si el usuario existe
+            //bcrpy hashcompare  entre user.password y req.body.password
+            //si la contraseña es valida
+              //chequeo si esta tocado el recordarme
+              //si esta tocado
+                //creo una cookie con el id o el email del usuario
+              //si no esta tocado...
+                //nada...
+              //devuelvo user a la vista y redirijo
+            //si no es valida la contraseña
+              //vuelvo a la vista con un error
+        //si el usuario no existe
+        //redirijo a la vista donde estaba con un error
+
       }
 
 }

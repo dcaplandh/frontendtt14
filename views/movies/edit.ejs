@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edición de pelicula</title>
+</head>
+<body>
+    <h1>Genero: <%= movie.genero.name %></h1>
+    <h1>Actores:</h1>
+    <% movie.losActoresDeLaPeli.forEach(actor =>{ %>
+        <%= actor.first_name + " " + actor.last_name %><br>
+    <% }); %>
+    <form action="/database/edit/<%= movie.id %>" method="POST">
+        Title:
+        <input type="text" name="title" value="<%= movie.title %>">
+        <br>
+        Rating:
+        <input type="text" name="rating" value="<%= movie.rating %>">
+        <br>
+        Awards:
+        <input type="text" name="awards" value="<%= movie.awards %>">
+        <br>
+        Release Date:
+        <input type="text" name="release_date" value="<%= movie.release_date %>">
+        <br>
+        Length:
+        <input type="text" name="length" value="<%= movie.length %>">
+        <br>
+        genre_id:
+        <input type="text" name="genre_id" value="<%= movie.genre_id %>">
+        <br>
+        <button type="submit">ACTUALIZAR PELICULA</button>
+    </form>
+</body>
+</html>
