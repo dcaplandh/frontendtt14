@@ -26,4 +26,10 @@ router.get('/clase4/bootstrap', function(req, res, next) {
 router.get('/clase4/flexbox', function(req, res, next) {
   res.render('frontend/flexbox');
 });
+router.get('/js/clase1', function(req, res, next) {
+  res.render('frontend/jsfront1');
+});
+router.get('/js/clase2', function(req, res, next) {
+  res.render('frontend/jsfront2');
+});
 module.exports = router;
