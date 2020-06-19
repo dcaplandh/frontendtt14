@@ -18,12 +18,123 @@
             console.log(titulo);
         })
     </script>
+    <style>
+        .palabra{
+            display:flex;
+        }
+        .palabra .letra{
+            margin-right:4px;
+        }
+   
+    .tateti{
+            width:610px;
+            height:610px;
+            display:flex;
+            flex-wrap: wrap;
+        }
+        .tateti .caja{
+            width:200px;
+            height:200px;
+            font-size:150px;
+            color:blue;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .caja1{
+            border-right:2px solid red;
+            border-bottom:2px solid red;
+        }
+        .caja5{
+            border:2px solid red;
+        }
+        .caja3{
+            border-left:2px solid red;
+            border-bottom:2px solid red;
+        }
+        .caja7{
+        border-right:2px solid red;
+            border-top:2px solid red;
+        }
+        .caja9{
+            border-left:2px solid red;
+            border-top:2px solid red;
+        }
+    </style>
 </head>
 <body>
-    <h2>uf! tu numero es mayor al elegido</h2>
-    <input type="text">
+    <h2>Adivina un numero entre el 1 y 100</h2>
+    <input type="text" name="numero">
     <button>ADIVINAR</button>
-    <h5>chances: 5</h5>
+    <h5>chances: <strong>5</strong></h5>
+    <hr>
+    <h4>Adivina la frase usando las teclas</h4>
+    <div class="palabra">
+        <div class="letra d">_</div>
+        <div class="letra i">_</div>
+        <div class="letra e">_</div>
+        <div class="letra g">_</div>
+        <div class="letra o">_</div>
+        <div class="letra"> </div>
+        <div class="letra e">_</div>
+        <div class="letra s">_</div>
+        <div class="letra"> </div>
+        <div class="letra e">_</div>
+        <div class="letra l">_</div>
+        <div class="letra"> </div>
+        <div class="letra p">_</div>
+        <div class="letra r">_</div>
+        <div class="letra o">_</div>
+        <div class="letra f">_</div>
+        <div class="letra e">_</div>
+    </div>
+    <hr>
+    
+    <div class="tateti">
+        <div class="caja caja1"></div>
+        <div class="caja caja2"></div>
+        <div class="caja caja3"></div>
+        <div class="caja caja4"></div>
+        <div class="caja caja5"></div>
+        <div class="caja caja6"></div>
+        <div class="caja caja7"></div>
+        <div class="caja caja8"></div>
+        <div class="caja caja9"></div>
+    </div>
+    <style>
+        .color{
+            width:100px;
+            height:100px;
+            border:1px solid grey;
+        }
+        .blue{
+            background:blue;
+            color:blue;
+        }
+        .yellow{
+            background:yellow;
+            color:yellow;
+        }
+        .green{
+            background:green;
+            color:green;
+        }
+        .red{
+            background:red;
+            color:red;
+        }
+
+    </style>
+    <h4>Pinta los casilleros con letras</h4>
+    <div class="color elegir blue" id="blue"></div>
+    <div class="color elegir yellow" id="yellow"></div>
+    <div class="color elegir green" id="green"></div>
+    <div class="color elegir red" id="red"></div>
+
+    <div class="color pintar" onmouseover="escribir(this)">A</div>
+    <div class="color pintar" onmouseover="escribir(this)">B</div>
+    <div class="color pintar" onmouseover="escribir(this)">C</div>
+    <div class="color pintar" onmouseover="escribir(this)">D</div>
     <script src="/javascripts/script2.js"></script>
 </body>
 </html>
